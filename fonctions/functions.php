@@ -1,5 +1,8 @@
 <?php
 
+if (!isset($_SESSION)) {
+    session_start();
+}
 /**
  * Débugger une variable :
  * @param type $var (la variable à afficher)
@@ -12,6 +15,13 @@ echo "</pre>";
 if ($die){
     die;
 }
+}
+
+function currentUser() {
+    if (isset($_SESSION["id"])) {
+        return getOneUser($_SESSION["id"]);
+    }
+    return null;
 }
 
 function getHeader(string $title) {
