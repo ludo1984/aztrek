@@ -1,12 +1,15 @@
 <?php require_once __DIR__ . '/../security.php'; ?>
 <html>
-    <head>
+   <head>
         <meta charset="utf-8">
         <title>Admin</title>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/bootstrap/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/font-awesome/css/font-awesome.min.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables/media/css/jquery.dataTables.min.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css"/>
+        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/select2/dist/css/select2.min.css"/>
+        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote.css"/>
+        <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>node_modules/summernote/dist/summernote-bs4.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/dashboard.css"/>
         <link rel="stylesheet" href="<?php echo ADMIN_URL; ?>css/admin.css"/>
     </head>

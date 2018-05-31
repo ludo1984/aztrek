@@ -1,20 +1,20 @@
 <?php
-
 if (!isset($_SESSION)) {
     session_start();
 }
+
 /**
- * Débugger une variable :
- * @param type $var (la variable à afficher)
- * @param bool $die (pour arrêter l'exécution)
+ * Debugger une variable
+ * @param mixed $var La variable à afficher
+ * @param bool $die Arrêter l'execution
  */
 function debug($var, bool $die = true) {
     echo "<pre>";
-print_r($var);
-echo "</pre>";  
-if ($die){
-    die;
-}
+    print_r($var);
+    echo "</pre>";
+    if ($die) {
+        die;
+    }
 }
 
 function currentUser() {
@@ -22,6 +22,14 @@ function currentUser() {
         return getOneUser($_SESSION["id"]);
     }
     return null;
+}
+
+/**
+ * Récupérer le chemin actuel (sans le nom du fichier)
+ * @return string Path
+ */
+function currentPath() {
+    return "http://" . $_SERVER["HTTP_HOST"] . substr($_SERVER['REQUEST_URI'], 0, strrpos($_SERVER['REQUEST_URI'], '/') + 1);
 }
 
 function getHeader(string $title) {
